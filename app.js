@@ -5,11 +5,14 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 
+
 // Ejecutar express (http)
 
 var app = express();
 
 // Cargar ficheros-rutas
+
+var article_routes = require("./routes/article")
 
 // Middlewares
 
@@ -18,16 +21,9 @@ app.use(bodyParser.json());
 
 // CORS
 
-// Añadir prefijos a rutas
+// Añadir prefijos a rutas / cargar rutas
 
-// Ruta o método de prueba
-
-app.get('/probando', (req, resp) => {
-    return resp.status(200).send({
-        autor: 'Airan',
-        web: 'AiranSchez.com'
-    })
-})
+app.use('/api', article_routes)
 
 // Exportar modulo (fichero actual)
 module.exports = app
