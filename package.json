@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AiranSchez/API-RESTful-/issues"
   },
-  "homepage": "https://github.com/AiranSchez/API-RESTful-#readme"
+  "homepage": "https://github.com/AiranSchez/API-RESTful-#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
