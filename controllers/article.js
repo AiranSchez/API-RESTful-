@@ -11,6 +11,13 @@ var controller = {
         return resp.status(200).send({
             message: 'Soy la acción test de mi controlador'
         })
+    },
+
+    save: (req, resp) => {
+
+        return resp.status(200).send({
+            message: 'Soy la acción SAVE de mi controlador de artículos'
+        })
     }
 } // Fin del controlador
 
